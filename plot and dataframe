@@ -1,0 +1,48 @@
+x<-c(1,4,7,9,2,3)
+plot(x)
+y<-c(10,20,30,40,50,60)
+plot(x,y)
+plot(x,y,type="l")
+plot(x,y,type="o")
+a<-c(92,76,24,65,41,38,27,59,10,55)
+a
+stripchart(a)
+hist(a)
+pie(a)
+plot(x,y)
+
+plot(x,y,type = "s", col="red")
+plot(x,y,pch=0, col="red")
+plot(x,y,pch=4, col="red")
+title("simple plot","simple plot using R" ,xlab="x axis" ,ylab="y axis")
+
+
+
+# Creating a Student Dataset using a Data Frame
+student_data <- data.frame(
+  ID = c(101, 102, 103, 104, 105),
+  Name = c("Alice", "Bob", "Charlie", "David", "Eva"),
+  Age = c(20, 21, 19, 22, 20),
+  Gender = c("F", "M", "M", "M", "F"),
+  Math = c(85, 90, 78, 88, 92),
+  Science = c(80, 85, 88, 75, 95),
+  English = c(75, 80, 82, 89, 78)
+)
+
+# Calculate Total Marks and Average Marks
+student_data$Total_Marks <- student_data$Math + student_data$Science + student_data$English
+student_data$Average_Marks <- student_data$Total_Marks / 3
+
+# Display the Student Dataset
+print(student_data)
+
+# Summary Statistics
+summary(student_data)
+
+# Filter students who scored above 80 in Math
+high_math_scores <- subset(student_data, Math > 80)
+print(high_math_scores)
+
+# Sort students by Total Marks in descending order
+sorted_students <- student_data[order(-student_data$Total_Marks), ]
+print(sorted_students)
