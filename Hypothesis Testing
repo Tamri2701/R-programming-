@@ -1,0 +1,32 @@
+16.	A professor wants to know if her introductory statistics class has a good grasp of basic math. Six students are chosen at random from the class and given a math proficiency test. 
+The professor wants the class to be able to score above 70 on the test.
+The six students get the following scores:62, 92, 75, 68, 83, 95. Can the professor have 90% confidence that the mean score for the class on the test would be above 70.
+
+>scores <- c(62, 92, 75, 68, 83, 95)
+> t_test_result <- t.test(scores, mu = 70, alternative = "greater", conf.level = 0.90)
+> print(t_test_result)
+
+
+
+17.	We want to compare the heights in inches of two groups of individuals. Here are the measurements:
+X: 175, 168, 168, 190, 156, 181, 182, 175, 174, 179
+Y:  120, 180, 125, 188, 130, 190, 110, 185, 112, 188
+
+X <- c(175, 168, 168, 190, 156, 181, 182, 175, 174, 179)
+> Y <- c(120, 180, 125, 188, 130, 190, 110, 185, 112, 188)
+t_test_result <- t.test(X, Y, alternative = "two.sided", var.equal = TRUE)
+ print(t_test_result)
+
+
+18.	A study was performed to test wether cars get better mileage on premium gas than on regular gas. Each of 10 cars was first filled with regular or premium gas, decided by a coin toss, and the mileage for the tank was recorded. The mileage was recorded again for the same cars using other kind of gasoline. Determine wether cars get significantly better mileage with premium gas.
+Mileage with regular gas: 16,20,21,22,23,22,27,25,27,28
+Mileage with premium gas: 19, 22,24,24,25,25,26,26,28,32
+
+
+> regular_gas <- c(16, 20, 21, 22, 23, 22, 27, 25, 27, 28)
+> premium_gas <- c(19, 22, 24, 24, 25, 25, 26, 26, 28, 32)
+> t_test_mileage <- t.test(premium_gas, regular_gas, paired = TRUE, alternative = "greater")
+> print(t_test_mileage)
+
+
+
