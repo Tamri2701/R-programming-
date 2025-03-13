@@ -1,0 +1,28 @@
+1.	Write a R program to generate the even numbers from 1 to 30
+> even_numbers <- seq(2, 30, by = 2)
+> print(even_numbers)
+
+
+2.	Write a R program to check whether the given matrix is sparse matrix or not. (The number of zeros in the matrix must be greater than the other elements in sparse matrix)
+ Function to check if a matrix is sparse
+> is_sparse <- function(mat) {
++   zero_count <- sum(mat == 0)
++   total_elements <- length(mat)
++   
++   if (zero_count > total_elements / 2) {
++     return(TRUE)
++   } else {
++     return(FALSE)
++   }
++ }
+> 
+> # Example matrix
+> matrix_example <- matrix(c(0, 0, 3, 0, 5, 0, 0, 0, 0), nrow = 3, byrow = TRUE)
+> 
+> # Check if the matrix is sparse
+> if (is_sparse(matrix_example)) {
++   print("The given matrix is a sparse matrix.")
++ } else {
++   print("The given matrix is not a sparse matrix.")
++ }
+
