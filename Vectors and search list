@@ -1,0 +1,22 @@
+3.	Write a script that read two vectors V1 and V2 containing values (49, 21, 34, 53, 11) and (14, 49, 53, 34, 81). Find out the values of V1 that are not present in V2.
+ V1 <- c(49, 21, 34, 53, 11)
+> V2 <- c(14, 49, 53, 34, 81)
+> result <- setdiff(V1, V2)
+> print(result)
+
+4.	Write a R program to search a number in a list
+# Create a list with some numbers
+num_list <- list(10, 25, 37, 42, 55)
+
+# Function to search for a number in the list
+search_number <- function(lst, num) {
+  if (num %in% unlist(lst)) {
+    return(paste(num, "is found in the list."))
+  } else {
+    return(paste(num, "is not found in the list."))
+  }
+}
+
+# Example: Search for 37
+search_result <- search_number(num_list, 37)
+print(search_result)
