@@ -1,0 +1,19 @@
+5.	Write a R program to sum the matrix elements
+
+> mat <- matrix(c(1, 2, 3, 4, 5, 6, 7, 8, 9), nrow = 3, byrow = TRUE)
+> 
+> sum_elements <- sum(mat)
+>  
+> print(paste("Sum of matrix elements:", sum_elements))
+
+6.	Write a R program to sum even numbers and odd numbers between 1 and 20.
+
+> 
+> numbers <- 1:20
+> even_numbers <- numbers[numbers %% 2 == 0]
+> odd_numbers <- numbers[numbers %% 2 != 0]
+> sum_even <- sum(even_numbers)
+> sum_odd <- sum(odd_numbers)
+> print(paste("Sum of even numbers:", sum_even))
+
+> print(paste("Sum of odd numbers:", sum_odd))
